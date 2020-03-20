@@ -43,7 +43,7 @@ __metadata:
     "@types/node": ^12.12.7
     "@typescript-eslint/eslint-plugin": ^2.21.0
     "@typescript-eslint/parser": ^2.21.0
-    ava: latest
+    ava: 3.5.0
     change-case: ^3.1.0
     core-js: ^3.3.2
     del: ^5.1.0
@@ -65,7 +65,7 @@ __metadata:
     resolve: ^1.12.0
     ts-node: ^8.5.0
     tslib: ^1.10.0
-    typescript: 3.8.2
+    typescript: ^3.8.3
   languageName: unknown
   linkType: soft
 
@@ -86,9 +86,6 @@ __metadata:
     plop-pack-fancy-comments: ^0.2.0
     pnp-webpack-plugin: ^1.6.4
     source-map-support: ^0.5.16
-    ts-node: ^8.7.0
-    tslib: ^1.11.1
-    typescript: ^3.8.3
     v8flags: ^2.0.10
     webpack: ^4.42.0
     webpack-cli: ^3.3.11
@@ -2145,7 +2142,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ava@npm:latest":
+"ava@npm:3.5.0":
   version: 3.5.0
   resolution: "ava@npm:3.5.0"
   dependencies:
@@ -9215,7 +9212,9 @@ fsevents@~2.1.2:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@yarnpkg/pnpify": ^2.0.0-rc.19
     lerna: ^3.20.2
+    typescript: ^3.8.3
   languageName: unknown
   linkType: soft
 
@@ -10354,7 +10353,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^8.5.0, ts-node@npm:^8.7.0":
+"ts-node@npm:^8.5.0":
   version: 8.7.0
   resolution: "ts-node@npm:8.7.0"
   dependencies:
@@ -10386,7 +10385,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.10.0, tslib@npm:^1.11.1, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
+"tslib@npm:1.11.1, tslib@npm:^1.10.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.11.1
   resolution: "tslib@npm:1.11.1"
   checksum: 2/d40eba08de267b2d3c458ddbf51f9010a45b8e752d3bf8c0fed63e266afc9277c6a26e65e51223335b8753f9f106aeb600e704f2a6eae05729160671a97c52e7
@@ -10480,16 +10479,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-typescript@3.8.2:
-  version: 3.8.2
-  resolution: "typescript@npm:3.8.2"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 2/12d822e84f0d1280d7aa7bb9f0e80b756e1e2d61b481bc1aff6e063e4839f3da6367bfae64338906fcb019c43ca82215a00a747f453ca157d72ce337f3825c88
-  languageName: node
-  linkType: hard
-
 "typescript@^3.5.2, typescript@^3.8.3":
   version: 3.8.3
   resolution: "typescript@npm:3.8.3"
@@ -10497,16 +10486,6 @@ typescript@3.8.2:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 2/519b11576247fe3570d89a2aa757d8f666aafc0cb9465a6cdd4df09c1dc6bf7285f0c6008d2ac7a55ea26457e767aaab819f58439d80af2cce1d9805b2be1034
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@3.8.2#builtin<compat/typescript>":
-  version: 3.8.2
-  resolution: "typescript@patch:typescript@npm%3A3.8.2#builtin<compat/typescript>::version=3.8.2&hash=270b6c"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 2/6c32717da23fd0b3e427ff2af2a82ae6ef651f5a53a4d4db8f1f86ab09369461bf9143d77eb776c2f7930c941e236706421feaf2733a3be99878a4b3846f59a2
   languageName: node
   linkType: hard
 

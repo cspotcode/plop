@@ -10,8 +10,9 @@ const v8flags = require('v8flags');
 const interpret = require('interpret');
 const chalk = require('chalk');
 const ora = require('ora');
+const minimist = require('minimist');
 
-const nodePlop = require('node-plop');
+const nodePlop = require('@cspotcode/node-plop');
 const out = require('./console-out');
 const {combineBypassData} = require('./bypass');
 const {getBypassAndGenerator, handleArgFlags} = require('./input-processing');
@@ -111,5 +112,6 @@ function doThePlop(generator, bypassArr) {
 
 module.exports = {
 	Plop,
-	run
+	run,
+	minimist
 }

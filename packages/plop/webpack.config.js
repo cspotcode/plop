@@ -3,7 +3,7 @@ const PnpWebpackPlugin = require('pnp-webpack-plugin');
 const {get, set} = require('lodash');
 
 const config = module.exports = require('webpack-config-prefabs').nodeLibrary(module, {
-    entry: './bin/plop.js'
+    entry: './src/plop.js'
 });
 
 get(config, 'resolve.plugins') || set(config, 'resolve.plugins', []);

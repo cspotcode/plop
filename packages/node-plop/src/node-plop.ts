@@ -9,6 +9,10 @@ import bakedInHelpers from './baked-in-helpers';
 import generatorRunner from './generator-runner';
 import { PlopCfg } from './types';
 
+declare const __webpack_require__: typeof require;
+declare const __non_webpack_require__: typeof require;
+const __bypass_webpack_require__ = typeof __webpack_require__ === 'function' ? __non_webpack_require__ : require;
+
 function nodePlop(plopfilePath = '', plopCfg: PlopCfg = {}) {
 
 	let pkgJson = {};
@@ -191,7 +195,7 @@ function nodePlop(plopfilePath = '', plopCfg: PlopCfg = {}) {
 		setPlopfilePath(plopfilePath);
 		loadPackageJson();
 
-		const plopFileExport = require(path.join(plopfilePath, plopFileName));
+		const plopFileExport = __bypass_webpack_require__(path.join(plopfilePath, plopFileName));
 		const plop = typeof plopFileExport === 'function' ? plopFileExport : plopFileExport.default;
 
 		plop(plopfileApi, plopCfg);

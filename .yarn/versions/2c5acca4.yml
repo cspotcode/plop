@@ -1,0 +1,6 @@
+releases:
+  "@cspotcode/node-plop": prerelease
+  "@cspotcode/plop": prerelease
+
+declined:
+  - root-workspace-0b6124

@@ -1,0 +1,10 @@
+on:['push', 'pull_request']
+jobs:
+  my_first_job:
+    name: My first job
+    steps:
+      - name: git clone
+        uses: actions/checkout@v2
+      - name: test
+        uses: cspotcode/docker-images/images/node-ci@master
+        run: echo foobar

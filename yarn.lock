@@ -33,7 +33,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cspotcode/node-plop@workspace:packages/node-plop, @cspotcode/node-plop@~0.25.0":
+"@cspotcode/node-plop@workspace:packages/node-plop, @cspotcode/node-plop@~0.25.1-0":
   version: 0.0.0-use.local
   resolution: "@cspotcode/node-plop@workspace:packages/node-plop"
   dependencies:
@@ -73,7 +73,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cspotcode/plop@workspace:packages/plop"
   dependencies:
-    "@cspotcode/node-plop": ~0.25.0
+    "@cspotcode/node-plop": ~0.25.1-0
     "@types/lodash": ^4.14.149
     "@yarnpkg/pnpify": ^2.0.0-rc.19
     chalk: ^1.1.3

@@ -1,10 +1,12 @@
+name: Continuous
 on: ['push', 'pull_request']
 jobs:
   continuous:
     name: Continous
+    runs-on: ubuntu-latest
     steps:
       - name: git clone
         uses: actions/checkout@v2
       - name: test
         uses: cspotcode/docker-images/images/node-ci@master
-        run: echo foobar
+        args: echo foobar

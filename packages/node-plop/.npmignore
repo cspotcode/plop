@@ -1,0 +1,7 @@
+tests
+declarations
+.*rc
+build-scripts
+plopfile.ts
+plop-templates
+tsconfig.tsbuildinfo

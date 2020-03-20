@@ -10,4 +10,6 @@ jobs:
       - name: test
         uses: cspotcode/docker-images/images/node-ci@master
         with:
-          cmd: echo foobar
+          args: echo foobar
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

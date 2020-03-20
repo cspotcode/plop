@@ -9,4 +9,5 @@ jobs:
         uses: actions/checkout@v2
       - name: test
         uses: cspotcode/docker-images/images/node-ci@master
-        args: echo foobar
+        with:
+          cmd: echo foobar

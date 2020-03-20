@@ -1,7 +1,7 @@
-on:['push', 'pull_request']
+on: ['push', 'pull_request']
 jobs:
-  my_first_job:
-    name: My first job
+  continuous:
+    name: Continous
     steps:
       - name: git clone
         uses: actions/checkout@v2

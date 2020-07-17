@@ -32,16 +32,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime-corejs3@npm:^7.9.2":
-  version: 7.10.5
-  resolution: "@babel/runtime-corejs3@npm:7.10.5"
-  dependencies:
-    core-js-pure: ^3.0.0
-    regenerator-runtime: ^0.13.4
-  checksum: fc1caee034dae9fe4a411f3b09296debec728a059448c1e90f765ce1792f4229e658759103442825d5e6a2145a22417f75b181aecbe28914f2ee206df5fbafe7
-  languageName: node
-  linkType: hard
-
 "@concordance/react@npm:^2.0.0":
   version: 2.0.0
   resolution: "@concordance/react@npm:2.0.0"
@@ -51,10 +41,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cspotcode/node-plop@workspace:packages/node-plop, @cspotcode/node-plop@~0.25.1-0":
+"@cspotcode/node-plop@workspace:*, @cspotcode/node-plop@workspace:packages/node-plop":
   version: 0.0.0-use.local
   resolution: "@cspotcode/node-plop@workspace:packages/node-plop"
   dependencies:
+    "@cspotcode/plop": "workspace:*"
     "@types/inquirer": ^6.5.0
     "@types/node": ^12.12.7
     "@typescript-eslint/eslint-plugin": ^2.21.0
@@ -74,7 +65,6 @@ __metadata:
     isbinaryfile: ^4.0.2
     lodash.get: ^4.4.2
     mkdirp: ^0.5.1
-    plop: ^2.4.0
     plop-pack-fancy-comments: ^0.2.1
     pre-commit: ^1.x
     resolve: ^1.12.0
@@ -84,11 +74,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cspotcode/plop@workspace:packages/plop":
+"@cspotcode/plop@workspace:*, @cspotcode/plop@workspace:packages/plop":
   version: 0.0.0-use.local
   resolution: "@cspotcode/plop@workspace:packages/plop"
   dependencies:
-    "@cspotcode/node-plop": ~0.25.1-0
+    "@cspotcode/node-plop": "workspace:*"
     "@types/lodash": ^4.14.149
     "@yarnpkg/pnpify": ^2.0.0-rc.19
     chalk: ^1.1.3
@@ -1223,13 +1213,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/fined@npm:*":
-  version: 1.1.2
-  resolution: "@types/fined@npm:1.1.2"
-  checksum: 214a4af52f39a6e608e0a758d1999a11761279e1501c7bae6df31252a11725b3e41dadea5502e0cbccc030e487b0b981bb253a719bf9b10f00bbd76a7f482666
-  languageName: node
-  linkType: hard
-
 "@types/glob@npm:^7.1.1":
   version: 7.1.1
   resolution: "@types/glob@npm:7.1.1"
@@ -1248,15 +1231,6 @@ __metadata:
     "@types/through": "*"
     rxjs: ^6.4.0
   checksum: 29a6b2db1d46b908ab707abe98f7e19eb8dafc29b13599ae260a8cb1af5578772c6aa17e2e20b3d1fca15d5b89d1221eafefc7c2e34caa2d7d7d244d28c9ead7
-  languageName: node
-  linkType: hard
-
-"@types/interpret@npm:*":
-  version: 1.1.1
-  resolution: "@types/interpret@npm:1.1.1"
-  dependencies:
-    "@types/node": "*"
-  checksum: 3d50a8dcfbece1c7c7fb55e837499f21f37b69d5e7e51315469e8e3d66937dfbcac19cd43fd9ce8194b1ef6bd688971f2e0fb8961cb72647c6302f694e5cd173
   languageName: node
   linkType: hard
 
@@ -1280,17 +1254,6 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 3aaf557d5b82e733d5a17b7f55af5d6be953363c3a594f006d64265790fe87c301c6e1400c0b6b1cf72add50a0ceddc25afb8231ab8302a2e5b6ebfbfac30e5d
-  languageName: node
-  linkType: hard
-
-"@types/liftoff@npm:^2.5.0":
-  version: 2.5.0
-  resolution: "@types/liftoff@npm:2.5.0"
-  dependencies:
-    "@types/fined": "*"
-    "@types/interpret": "*"
-    "@types/node": "*"
-  checksum: 81abf6c987a37870662882bbb4bd760aa6d6ee7d179e58b1edf44584d1fc1533d2c540110c3f4b1cc951e9b9ac6f809f52ff67e118ade3d3f9e040c8295f6bc0
   languageName: node
   linkType: hard
 
@@ -3429,13 +3392,6 @@ __metadata:
   version: 0.1.1
   resolution: "copy-descriptor@npm:0.1.1"
   checksum: c052cf571ff6b69b604607a3d41f03cb742af9472026013e690ab33e1bef5e64930c53a5f881dc79c7e4f5ccc3cea0ebb9f420315d3690989329088976b68ee9
-  languageName: node
-  linkType: hard
-
-"core-js-pure@npm:^3.0.0":
-  version: 3.6.5
-  resolution: "core-js-pure@npm:3.6.5"
-  checksum: 91fc8e0b699d5bcb11f265ad4544d08c98096b86ad6c9b4c00109616db0aa992ceb58ea82d0dbae2a16658a7aaf2922aa6f9fc1107dc3b0055270799d0414a3f
   languageName: node
   linkType: hard
 
@@ -5841,7 +5797,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"inquirer@npm:^7.0.0, inquirer@npm:^7.1.0":
+"inquirer@npm:^7.0.0":
   version: 7.1.0
   resolution: "inquirer@npm:7.1.0"
   dependencies:
@@ -7596,25 +7552,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"node-plop@npm:~0.26.0":
-  version: 0.26.0
-  resolution: "node-plop@npm:0.26.0"
-  dependencies:
-    "@babel/runtime-corejs3": ^7.9.2
-    "@types/inquirer": ^6.5.0
-    change-case: ^3.1.0
-    del: ^5.1.0
-    globby: ^10.0.1
-    handlebars: ^4.4.3
-    inquirer: ^7.1.0
-    isbinaryfile: ^4.0.2
-    lodash.get: ^4.4.2
-    mkdirp: ^0.5.1
-    resolve: ^1.12.0
-  checksum: c76d07c4c95e90624332c43d6c8e7b3c3bf65ea0725defc5a65307a2299fda40a40e2537740ec16b9de8664032a488ad3b5640e1c08683f36c13b5aa2905069a
-  languageName: node
-  linkType: hard
-
 "node-pre-gyp@npm:*":
   version: 0.14.0
   resolution: "node-pre-gyp@npm:0.14.0"
@@ -8587,24 +8524,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"plop@npm:^2.4.0":
-  version: 2.7.1
-  resolution: "plop@npm:2.7.1"
-  dependencies:
-    "@types/liftoff": ^2.5.0
-    chalk: ^1.1.3
-    interpret: ^1.2.0
-    liftoff: ^2.5.0
-    minimist: ^1.2.0
-    node-plop: ~0.26.0
-    ora: ^3.4.0
-    v8flags: ^2.0.10
-  bin:
-    plop: bin/plop.js
-  checksum: 838bc05a923054eba7fd314c0f3aa8a07efb0e87e0317f1c6f048a7a39431d5609d93567d3853d5de2532e6dca1d6637df6422ad80687ec334bfe035198ff968
-  languageName: node
-  linkType: hard
-
 "plur@npm:^4.0.0":
   version: 4.0.0
   resolution: "plur@npm:4.0.0"
@@ -9139,13 +9058,6 @@ rechoir@0.6.2:
     indent-string: ^4.0.0
     strip-indent: ^3.0.0
   checksum: 78c8aa0a1076f47e0e198bfc8a9aa7d4ae3163c6951bd5de1015e47661bba62ea36573337bbeb4b309b48cc71954edbe43ae4aa3163db1996a781b757c5c47d7
-  languageName: node
-  linkType: hard
-
-"regenerator-runtime@npm:^0.13.4":
-  version: 0.13.5
-  resolution: "regenerator-runtime@npm:0.13.5"
-  checksum: 8d8ee0eca26e0491085033caf2b1b95379c4db21e38d79cde52bbd4014a3865eee26ec0f4f958682e8600f185f2f5dbcd8c6685b9b9261639767929c19b5bcd2
   languageName: node
   linkType: hard
 

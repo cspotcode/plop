@@ -42,6 +42,7 @@
     "node": ">=8.9.4"
   },
   "devDependencies": {
+    "@cspotcode/plop": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^2.21.0",
     "@typescript-eslint/parser": "^2.21.0",
     "ava": "3.5.0",
@@ -51,7 +52,6 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "plop": "^2.4.0",
     "plop-pack-fancy-comments": "^0.2.1",
     "pre-commit": "^1.x",
     "ts-node": "^8.5.0",

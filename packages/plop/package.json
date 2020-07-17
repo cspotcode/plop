@@ -50,10 +50,7 @@
     "v8flags": "^2.0.10",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
-    "webpack-config-prefabs": "patch:webpack-config-prefabs@0.0.2#./patches/webpack-config-prefabs"
-  },
-  "resolutions": {
-    "liftoff/rechoir": "patch:rechoir@0.6.2#./patches/rechoir"
+    "webpack-config-prefabs": "patch:webpack-config-prefabs@0.0.2#../../patches/webpack-config-prefabs"
   },
   "homepage": "https://plopjs.com",
   "engines": {

@@ -1,5 +1,6 @@
 {
     "private": true,
+    "name": "root",
     "version": "0.0.0",
     "workspaces": [
         "packages/*"
@@ -8,5 +9,9 @@
         "@yarnpkg/pnpify": "^2.0.0-rc.19",
         "lerna": "^3.20.2",
         "typescript": "^3.8.3"
+    },
+    "resolutions": {
+        "liftoff/rechoir": "patch:rechoir@0.6.2#./patches/rechoir",
+        "node-plop": "patch:node-plop@npm:0.25.0#./patches/node-plop"
     }
 }

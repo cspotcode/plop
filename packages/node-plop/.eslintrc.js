@@ -30,6 +30,7 @@ module.exports = {
 		'@typescript-eslint/unbound-method': 'off',
 		'no-var': 'off',
 		'prefer-const': 'off',
-		'@typescript-eslint/ban-ts-ignore': 'off'
+		'@typescript-eslint/ban-ts-ignore': 'off',
+		'@typescript-eslint/camelcase': 'off'
 	}
 };

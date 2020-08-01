@@ -1,6 +1,6 @@
 {
   "name": "@cspotcode/node-plop",
-  "version": "0.25.1-0",
+  "version": "0.26.0-rc1",
   "description": "programmatic plopping for fun and profit",
   "main": "lib/index",
   "types": "index.d.ts",

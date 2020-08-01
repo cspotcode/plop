@@ -1,0 +1,10 @@
+{
+    "include": ["src"],
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "out",
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "moduleResolution": "node"
+    }
+}

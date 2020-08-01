@@ -1,10 +1,6 @@
 import Liftoff = require("liftoff");
 import * as ora from "ora";
 
-import { EventEmitter } from 'events';
-import {PathSpec} from 'fined';
-export type __debug__ = [EventEmitter, PathSpec];
-
 export {
     ActionConfig,
     ActionType,

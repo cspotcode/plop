@@ -23,7 +23,21 @@ const Plop = new Liftoff({
 	v8flags: v8flags
 });
 
-function run(env) {
+const progressSpinner = ora();
+
+/**
+ * The function to pass as the second argument to `Plop.launch`
+ * @param env - This is passed implicitly
+ * @param _ - Passed implicitly. Not needed, but allows for `passArgsBeforeDashes` to be explicitly passed
+ * @param passArgsBeforeDashes - An opt-in `true` boolean that will allow merging of plop CLI API and generator API
+ * @example
+ * Plop.launch({}, env => run(env, undefined, true))
+ *
+ * !!!!!! WARNING !!!!!!
+ * One of the reasons we default generator arguments as anything past `--` is a few reasons:
+ * Primarily that there may be name-spacing issues when combining the arg order and named arg passing
+ */
+function run(env, _, passArgsBeforeDashes) {
 	const plopfilePath = env.configPath;
 
 	// handle basic argument flags like --help, --version, etc
@@ -37,7 +51,7 @@ function run(env) {
 
 	const generators = plop.getGeneratorList();
 	const generatorNames = generators.map(v => v.name);
-	const {generatorName, bypassArr, plopArgV} = getBypassAndGenerator(plop);
+	const {generatorName, bypassArr, plopArgV} = getBypassAndGenerator(plop, passArgsBeforeDashes);
 
 	// look up a generator and run it with calculated bypass data
 	const runGeneratorByName = name => {
@@ -82,15 +96,14 @@ function doThePlop(generator, bypassArr) {
 	generator.runPrompts(bypassArr)
 		.then(answers => {
 			const noMap = (argv['show-type-names'] || argv.t);
-			const progress = ora();
 			const onComment = (msg) => {
-				progress.info(msg); progress.start();
+				progressSpinner.info(msg); progressSpinner.start();
 			};
 			const onSuccess = (change) => {
 				let line = '';
 				if (change.type) { line += ` ${out.typeMap(change.type, noMap)}`; }
 				if (change.path) { line += ` ${change.path}`; }
-				progress.succeed(line); progress.start();
+				progressSpinner.succeed(line); progressSpinner.start();
 			};
 			const onFailure = (fail) => {
 				let line = '';
@@ -98,11 +111,11 @@ function doThePlop(generator, bypassArr) {
 				if (fail.path) { line += ` ${fail.path}`; }
 				const errMsg = fail.error || fail.message;
 				if (errMsg) { line += ` ${errMsg}` };
-				progress.fail(line); progress.start();
+				progressSpinner.fail(line); progressSpinner.start();
 			};
-			progress.start();
+			progressSpinner.start();
 			return generator.runActions(answers, {onSuccess, onFailure, onComment})
-				.then(() => progress.stop());
+				.then(() => progressSpinner.stop());
 		})
 		.catch(function (err) {
 			console.error(chalk.red('[ERROR]'), err.message);
@@ -113,5 +126,6 @@ function doThePlop(generator, bypassArr) {
 module.exports = {
 	Plop,
 	run,
+	progressSpinner,
 	minimist
 }
